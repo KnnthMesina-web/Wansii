@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Homepage</title>
+
+<link id="pagestyle" rel="stylesheet" href="STYLEI.css">
+
+<script>
+function changeStyle(style) {
+  var sheet = document.getElementById("pagestyle");
+
+  if (style === "") {
+    sheet.setAttribute("href", "");
+  } else {
+    sheet.setAttribute("href", style);
+  }
+}
+</script>
+
+<style>
+li {
+  cursor: pointer;
+  padding: 8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Welcome to My Homepage</h1>
+  <p>Use the menu to select different Stylesheets</p>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+  <ul>
+    <li><a href="#" onclick="changeStyle('STYLEI.css')">Stylesheet 1</a></li>
+    <li><a href="#" onclick="changeStyle('STYLEII.css')">Stylesheet 2</a></li>
+    <li><a href="#" onclick="changeStyle('STYLEIII.css')">Stylesheet 3</a></li>
+    <li><a href="#" onclick="changeStyle('STYLEIIII.css')">Stylesheet 4</a></li>
+    <li><a href="#" onclick="changeStyle('')">No Stylesheet</a></li>
+  </ul>
+</div>
+
+<div class="col-6">
+  <h1>Same Page Different Stylesheets</h1>
+  <p>
+    This is a demonstration of how different stylesheets can change the layout of your HTML page.
+    You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+    <a href="#" onclick="changeStyle('STYLEI.css')">Stylesheet1</a>,
+    <a href="#" onclick="changeStyle('STYLEII.css')">Stylesheet2</a>,
+    <a href="#" onclick="changeStyle('STYLEIII.css')">Stylesheet3</a>,
+    <a href="#" onclick="changeStyle('STYLEIIII.css')">Stylesheet4</a>.
+  </p>
+
+  <h2>No Styles</h2>
+  <p>
+    This page uses DIV elements to group different sections of the HTML page.
+    Click here to see how the page looks like with no stylesheet:
+    <a href="#" onclick="changeStyle('')">No Stylesheet</a>.
+  </p>
+</div>
+
+<div class="col-3 right">
+  <div class="aside">
+    <h2>Side-Bar</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+</body>
+</html>
