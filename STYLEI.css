@@ -1,0 +1,52 @@
+body {
+  background: #e8f5e9;
+  font-family: Arial;
+}
+
+.header {
+  background: #4caf50;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.menu {
+  width: 20%;
+  background: #ffeb3b;
+  margin: 10px;
+  padding: 10px;
+}
+
+.menu li {
+  background: #8bc34a;
+  margin: 5px 0;
+  padding: 10px;
+  color: white;
+}
+
+.col-6 {
+  width: 50%;
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border: 3px solid #4caf50;
+}
+
+.right {
+  width: 30%;
+  background: #009688;
+  color: white;
+  margin: 10px;
+  padding: 15px;
+}
+
+.footer {
+  background: #4caf50;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
