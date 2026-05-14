@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finals Task 2 - Flexbox</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* PART 1 */
+
+.flex1{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.flex1 .box1{
+    width: 200px;
+    background: lightblue;
+    padding: 10px;
+}
+
+.flex1 .box2{
+    width: 75px;
+    background: pink;
+    padding: 10px;
+}
+
+.flex2{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.flex2 .item1{
+    width: 50px;
+    background: pink;
+    padding: 10px;
+}
+
+.flex2 .item2{
+    flex: 1;
+    background: lightblue;
+    padding: 10px;
+}
+
+.flex2 .item3{
+    width: 75px;
+    background: pink;
+    padding: 10px;
+}
+
+.flex3{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.flex3 div{
+    background: pink;
+    padding: 10px 20px;
+}
+
+.flex4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid gray;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.flex4 div{
+    background: pink;
+    padding: 5px 10px;
+}
+
+/* PART 2 */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    width: 100%;
+    background: beige;
+    padding: 20px;
+}
+
+.left-nav{
+    background: green;
+    color: white;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.right-nav{
+    background: green;
+    color: white;
+    padding: 20px;
+    min-height: 200px;
+}
+
+footer{
+    width: 100%;
+    background: beige;
+    padding: 20px;
+}
+
+/* BREAKPOINT 1 */
+
+@media (min-width: 800px){
+
+    .left-nav{
+        width: 30%;
+    }
+
+    .right-nav{
+        width: 70%;
+    }
+
+}
+
+/* BREAKPOINT 2 */
+
+@media (max-width: 400px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .right-nav{
+        order: 1;
+        width: 100%;
+    }
+
+    .left-nav{
+        order: 2;
+        width: 100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Finals Task 2 - Using CSS Flex Box</h1>
+
+<h2>Part 1</h2>
+
+<p>12a. Create a flexbox with 2 items. Widths = 200px | 75px</p>
+
+<div class="flex1">
+    <div class="box1">200px</div>
+    <div class="box2">75px</div>
+</div>
+
+<p>12b. A flexbox with 3 items. Widths = 50px | remaining space | 75px</p>
+
+<div class="flex2">
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+    <div class="item3">item3</div>
+</div>
+
+<p>12c. A flexbox with 4 items, spread evenly across the page</p>
+
+<div class="flex3">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    <div>item4</div>
+</div>
+
+<p>12d. Create the flexbox below with height = 50px and a gray border</p>
+
+<div class="flex4">
+    <div>item1</div>
+    <div>item2</div>
+</div>
+
+<h2>Part 2 - Responsive Layout</h2>
+
+<div class="container">
+
+    <header>
+        This is a Header
+    </header>
+
+    <section class="left-nav">
+        Section left-nav
+    </section>
+
+    <section class="right-nav">
+        Section right-nav
+    </section>
+
+    <footer>
+        This is a footer
+    </footer>
+
+</div>
+
+</body>
+</html>
